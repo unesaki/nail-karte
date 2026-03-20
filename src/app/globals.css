@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #F2A7BB;
+  --primary-deep: #D97FA0;
+  --primary-light: #FDE8EF;
+  --bg: #FFF5F7;
+  --accent: #BFA8C9;
+  --quick: #F5A623;
+  --danger: #E57373;
+  --success: #5BC97A;
+  color-scheme: light;
+}
+
+html {
+  background-color: var(--bg);
+}
+
+body {
+  font-family: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif;
+  background-color: var(--bg);
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* スクロールバー非表示（モバイル感） */
+::-webkit-scrollbar {
+  display: none;
+}
+
+@layer utilities {
+  .text-primary { color: var(--primary); }
+  .bg-primary { background-color: var(--primary); }
+  .bg-primary-light { background-color: var(--primary-light); }
+  .border-primary { border-color: var(--primary); }
+  .bg-quick { background-color: var(--quick); }
+  .text-danger { color: var(--danger); }
+  .bg-danger { background-color: var(--danger); }
+  .bg-success { background-color: var(--success); }
+}
